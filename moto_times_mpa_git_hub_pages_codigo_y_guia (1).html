@@ -1,0 +1,377 @@
+<!--
+Proyecto: MotoTimes - Sitio MPA para GitHub Pages (modo oscuro, minimalista)
+Estructura de archivos incluida en este documento.
+Instrucciones: Copia cada bloque en el archivo indicado cuando subas a GitHub.
+-->
+
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotoTimes - Selección</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="dark">
+  <header class="top">
+    <div class="container">
+      <h1>MotoTimes</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="live.html">En directo</a>
+        <a href="records.html">Mejores tiempos</a>
+        <a href="circuitos.html">Circuitos</a>
+        <a href="constructores.html">Constructores</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="card">
+      <h2>Elige categoría</h2>
+      <div class="buttons">
+        <a class="btn" href="live.html?cat=MotoGP">MotoGP</a>
+        <a class="btn" href="live.html?cat=Moto2">Moto2</a>
+        <a class="btn" href="live.html?cat=Moto3">Moto3</a>
+      </div>
+      <p class="muted">Pulsa para ver la sesión en directo (datos simulados).</p>
+    </section>
+
+    <section class="card">
+      <h3>Resumen rápido</h3>
+      <ul>
+        <li>Cronometraje en directo</li>
+        <li>Mejores tiempos por piloto</li>
+        <li>Detalles: neumáticos y frenos</li>
+        <li>Información de circuitos y clima</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Proyecto demo · Modo oscuro · Datos simulados</div>
+  </footer>
+  <script src="assets/js/api_simulada.js"></script>
+</body>
+</html>
+
+<!-- FILE: live.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotoTimes - En directo</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="dark">
+  <header class="top">
+    <div class="container">
+      <h1>MotoTimes — En directo</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="live.html">En directo</a>
+        <a href="records.html">Mejores tiempos</a>
+        <a href="circuitos.html">Circuitos</a>
+        <a href="constructores.html">Constructores</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="categoria-title">Categoría: —</h2>
+      <p class="muted">Datos simulados. Para cambiar los datos en directo edita <code>assets/js/api_simulada.js</code>.</p>
+
+      <div id="live-area">
+        <table class="table">
+          <thead>
+            <tr><th>Pos</th><th>Piloto</th><th>Mejor</th><th>Neumático (Del/Tras)</th><th>Frenos</th></tr>
+          </thead>
+          <tbody id="pilotos-tbody"></tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Actualizado automáticamente desde datos simulados</div>
+  </footer>
+
+  <script src="assets/js/api_simulada.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<!-- FILE: records.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotoTimes - Mejores Tiempos</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="dark">
+  <header class="top">
+    <div class="container">
+      <h1>Mejores tiempos</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="live.html">En directo</a>
+        <a href="records.html">Mejores tiempos</a>
+        <a href="circuitos.html">Circuitos</a>
+        <a href="constructores.html">Constructores</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Listado por categoría</h2>
+      <div id="records-area"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Datos simulados - Editar en <code>assets/js/api_simulada.js</code></div>
+  </footer>
+
+  <script src="assets/js/api_simulada.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<!-- FILE: circuitos.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotoTimes - Circuitos</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="dark">
+  <header class="top">
+    <div class="container">
+      <h1>Circuitos</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="live.html">En directo</a>
+        <a href="records.html">Mejores tiempos</a>
+        <a href="circuitos.html">Circuitos</a>
+        <a href="constructores.html">Constructores</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Lista de circuitos</h2>
+      <div id="circuitos-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Dibujo de circuitos: imagenes SVG simples o PNG (ejemplo).</div>
+  </footer>
+
+  <script src="assets/js/api_simulada.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<!-- FILE: constructores.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotoTimes - Constructores</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="dark">
+  <header class="top">
+    <div class="container">
+      <h1>Constructores</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="live.html">En directo</a>
+        <a href="records.html">Mejores tiempos</a>
+        <a href="circuitos.html">Circuitos</a>
+        <a href="constructores.html">Constructores</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Clasificación por constructores</h2>
+      <div id="constructores-table"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Colores y puntos vienen de los datos simulados.</div>
+  </footer>
+
+  <script src="assets/js/api_simulada.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
+<!-- FILE: assets/css/styles.css -->
+:root{
+  --bg:#0b0f14; --panel:#0f1720; --muted:#9aa4b2; --accent:#08a0f7; --card:#0e1419;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;background:var(--bg);color:#e6eef6}
+.container{max-width:980px;margin:0 auto;padding:20px}
+.top{border-bottom:1px solid rgba(255,255,255,0.04)}
+.top .container{display:flex;align-items:center;justify-content:space-between}
+.top h1{font-size:20px;margin:12px 0}
+nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+nav a:hover{color:var(--accent)}
+.main-grid{display:grid;grid-template-columns:1fr 360px;gap:20px;padding-top:28px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.buttons{display:flex;gap:10px}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;background:rgba(255,255,255,0.03);color:#e6eef6;text-decoration:none}
+.btn:hover{background:rgba(8,160,247,0.12)}
+.muted{color:var(--muted);font-size:14px}
+.table{width:100%;border-collapse:collapse;margin-top:12px}
+.table th,.table td{padding:10px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+.footer{border-top:1px solid rgba(255,255,255,0.03);padding:12px;margin-top:24px;color:var(--muted)}
+.small{font-size:13px;color:var(--muted)}
+.pilot-color{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px;vertical-align:middle}
+@media(max-width:820px){.main-grid{grid-template-columns:1fr;}}
+
+<!-- FILE: assets/js/api_simulada.js -->
+// Datos simulados: edítalos para cambiar la información que se muestra en la web.
+window.MOTO_API = {
+  categorias: ["MotoGP","Moto2","Moto3"],
+  pilotos: {
+    "MotoGP": [
+      {id:1,nombre:"F. Rossi",mejor:"1:38.456",del:"SC0",tras:"SC1",frenos:"Brembo"},
+      {id:2,nombre:"M. Márquez",mejor:"1:37.912",del:"SC1",tras:"SC1",frenos:"Brembo"},
+      {id:3,nombre:"V. Rossi",mejor:"1:38.999",del:"SC0",tras:"SC2",frenos:"Nissin"}
+    ],
+    "Moto2":[
+      {id:21,nombre:"A. Binder",mejor:"1:42.123",del:"SC1",tras:"SC1",frenos:"Brembo"}
+    ],
+    "Moto3":[
+      {id:31,nombre:"F. Rodrigo",mejor:"1:48.234",del:"SC2",tras:"SC2",frenos:"Nissin"}
+    ]
+  },
+  circuitos: [
+    {id:1,nombre:"Circuito Ejemplo",pais:"España",dias:"12-14 Sep 2025",svg:null,ultimo_mejor:{piloto:"M. Márquez",tiempo:"1:37.912",del:"SC1",tras:"SC1",frenos:"Brembo"},clima:{ambiente:28,pista:38,cond:"Soleado"},neumaticos_recomendados:{del:"SC1",tras:"SC1"},frenos_recomendados:"Brembo"}
+  ],
+  constructores:[
+    {nombre:"Ducati",color:'#ff3b30',puntos:325},
+    {nombre:"Yamaha",color:'#1e90ff',puntos:298},
+    {nombre:"Honda",color:'#19a974',puntos:270}
+  ]
+};
+
+<!-- FILE: assets/js/main.js -->
+// script simple para leer los datos simulados y mostrar en las páginas
+(function(){
+  if(!window.MOTO_API) return;
+  // util: get query param
+  function qp(name){const u=new URLSearchParams(location.search);return u.get(name)}
+
+  // Live page
+  if(document.getElementById('pilotos-tbody')){
+    const cat = qp('cat') || 'MotoGP';
+    document.getElementById('categoria-title').textContent = 'Categoría: ' + cat;
+    const pilotos = window.MOTO_API.pilotos[cat]||[];
+    const tbody = document.getElementById('pilotos-tbody'); tbody.innerHTML='';
+    pilotos.forEach((p,i)=>{
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${i+1}</td><td>${p.nombre}</td><td>${p.mejor}</td><td>${p.del} / ${p.tras}</td><td>${p.frenos}</td>`;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Records page
+  if(document.getElementById('records-area')){
+    const area = document.getElementById('records-area');
+    window.MOTO_API.categorias.forEach(cat=>{
+      const div = document.createElement('div');
+      div.className='card';
+      const list = (window.MOTO_API.pilotos[cat]||[]).map(p=>`<li><strong>${p.nombre}</strong> — ${p.mejor} <small class='small'>(${p.del}/${p.tras}, frenos: ${p.frenos})</small></li>`).join('');
+      div.innerHTML = `<h3>${cat}</h3><ul>${list}</ul>`;
+      area.appendChild(div);
+    });
+  }
+
+  // Circuitos page
+  if(document.getElementById('circuitos-list')){
+    const area = document.getElementById('circuitos-list');
+    window.MOTO_API.circuitos.forEach(c=>{
+      const el = document.createElement('div'); el.className='card';
+      el.innerHTML = `<h3>${c.nombre} — ${c.pais}</h3>
+        <p class='muted'>Fechas: ${c.dias}</p>
+        <p>Último mejor: <strong>${c.ultimo_mejor.piloto}</strong> ${c.ultimo_mejor.tiempo} <small class='small'>(${c.ultimo_mejor.del}/${c.ultimo_mejor.tras}, ${c.ultimo_mejor.frenos})</small></p>
+        <p class='small'>Clima: ${c.clima.cond} · Ambiente ${c.clima.ambiente}°C · Pista ${c.clima.pista}°C</p>
+        <p class='small'>Neumáticos recomendados: ${c.neumaticos_recomendados.del} / ${c.neumaticos_recomendados.tras} · Frenos: ${c.frenos_recomendados}</p>`;
+      area.appendChild(el);
+    });
+  }
+
+  // Constructores page
+  if(document.getElementById('constructores-table')){
+    const area = document.getElementById('constructores-table');
+    const table = document.createElement('table'); table.className='table';
+    table.innerHTML = `<thead><tr><th>Constructor</th><th>Puntos</th></tr></thead><tbody></tbody>`;
+    const tb = table.querySelector('tbody');
+    window.MOTO_API.constructores.forEach(c=>{
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td><span class='pilot-color' style='background:${c.color}'></span>${c.nombre}</td><td>${c.puntos}</td>`;
+      tb.appendChild(tr);
+    });
+    area.appendChild(table);
+  }
+})();
+
+<!-- FILE: README.md -->
+# MotoTimes - Versión MPA para GitHub Pages
+
+Proyecto minimalista en modo oscuro con datos simulados.
+
+## Archivos incluidos
+- `index.html` — selector de categoría.
+- `live.html` — muestra cronos en directo (simulados).
+- `records.html` — mejores tiempos detallados.
+- `circuitos.html` — información y clima por circuito.
+- `constructores.html` — tabla de constructores, colores y puntos.
+- `assets/css/styles.css` — estilos (modo oscuro minimalista).
+- `assets/js/api_simulada.js` — **aquí editas los datos** (pilotos, circuitos, constructores y clima).
+- `assets/js/main.js` — lógica sencilla para rellenar las páginas con los datos.
+
+## Cómo publicar en GitHub Pages (paso a paso, sin usar terminal)
+1. Crea una cuenta en https://github.com si no tienes.
+2. Pulsa en el botón `New` (nuevo repositorio).
+   - Nombre: `mototimes` (o el que quieras).
+   - Deja el repositorio en *Public*.
+   - No marques "Initialize with README" (o puedes marcarlo y luego editar).
+3. Una vez creado el repo, entra en la pestaña `Add file` → `Upload files`.
+4. Arrastra los archivos y carpetas del proyecto (usa el navegador para crear la estructura localmente o sube los archivos uno por uno). 
+5. Haz click en "Commit changes" para subirlos.
+6. Ve a `Settings` del repositorio → `Pages` → selecciona la rama `main` y carpeta `/ (root)` y guarda.
+7. GitHub mostrará la URL de tu sitio en pocos minutos: `https://<tu-usuario>.github.io/<nombre-repo>/`.
+
+## Cómo editar los datos (no necesitas programar)
+- Abre `assets/js/api_simulada.js` en el editor de GitHub (pulsa el archivo y elige el icono del lápiz).
+- Cambia nombres, tiempos, neumáticos y frenos directamente en las variables.
+- Guarda el cambio (Commit). La web se actualizará al cabo de 1-2 minutos.
+
+## Ideas para mejorar
+- Conectar una API real de cronometraje (requiere programación y posiblemente pago/licencia).
+- Añadir un pequeño formulario admin que agregue tiempos mediante `localStorage` o Google Sheets.
+- Integrar OpenWeatherMap para clima real (requiere crear una cuenta y clave API).
+
+---
+
+Disfruta de tu web. Si quieres, te ayudo a crear el repositorio en GitHub (puedo guiarte paso a paso) y subir los archivos.

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotoLive — En directo</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="dark">
+  <header class="top">
+    <div class="container">
+      <h1>En directo</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="live.html">En directo</a>
+        <a href="records.html">Mejores tiempos</a>
+        <a href="circuitos.html">Circuitos</a>
+        <a href="constructores.html">Constructores</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2 id="categoria-title">Categoría: —</h2>
+      <p class="muted">Se intentará conectar con la API en tiempo real. Si no se puede, se cargará times.json del repositorio.</p>
+
+      <div id="status" class="small muted">Estado: iniciando...</div>
+
+      <table class="table" id="live-table">
+        <thead>
+          <tr><th>Pos</th><th>Piloto</th><th>Mejor</th><th>Neumáticos (Del/Tras)</th><th>Frenos</th></tr>
+        </thead>
+        <tbody id="live-tbody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container small">Actualización automática cada 10 s.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

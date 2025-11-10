@@ -1,0 +1,26 @@
+name: Actualizar tiempos de MotoLive
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Cada 5 minutos
+  workflow_dispatch:      # Permite ejecutarlo manualmente
+
+jobs:
+  fetch-times:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Obtener tiempos simulados
+        run: |
+          echo "Descargando datos simulados..."
+          curl -s https://mocki.io/v1/1e3d9df1-1a25-4c6b-9e77-8b0738c0ce8d > times.json
+
+      - name: Subir cambios
+        run: |
+          git config --global user.name "MotoLive Bot"
+          git config --global user.email "bot@motolive.com"
+          git add times.json
+          git commit -m "Actualización automática de tiempos" || echo "Sin cambios"
+          git push

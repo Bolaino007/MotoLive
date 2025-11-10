@@ -1,22 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MotoLive</title>
-    <style>
-        body {
-            background-color: #121212;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding-top: 50px;
-        }
-        h1 { color: #ff4d4d; }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MotoLive — Inicio</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    <h1>🏁 Bienvenido a MotoLive</h1>
-    <p>Tu portal minimalista de tiempos en directo de MotoGP, Moto2 y Moto3.</p>
+<body class="dark">
+  <header class="top">
+    <div class="container">
+      <h1>MotoLive</h1>
+      <nav>
+        <a href="index.html">Inicio</a>
+        <a href="live.html">En directo</a>
+        <a href="records.html">Mejores tiempos</a>
+        <a href="circuitos.html">Circuitos</a>
+        <a href="constructores.html">Constructores</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="card">
+      <h2>Selecciona categoría</h2>
+      <div class="buttons">
+        <a class="btn" href="live.html?cat=1">MotoGP</a>
+        <a class="btn" href="live.html?cat=2">Moto2</a>
+        <a class="btn" href="live.html?cat=3">Moto3</a>
+      </div>
+      <p class="muted">Datos en tiempo real (si el endpoint lo permite). Si no, se utilizarán datos actualizados desde el repositorio.</p>
+    </section>
+
+    <section class="card">
+      <h3>Resumen</h3>
+      <ul>
+        <li>Cronos en tiempo real (API o fallback)</li>
+        <li>Mejor tiempo por piloto y tabla final</li>
+        <li>Neumáticos (delantero/trasero) y frenos</li>
+        <li>Información de circuito, clima y temperaturas</li>
+        <li>Tabla de constructores con colores y puntos</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container small">MotoLive · Datos: motogp.com (si disponible) · Fallback local si CORS bloquea</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

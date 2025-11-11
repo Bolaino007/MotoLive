@@ -170,3 +170,35 @@ async function main() {
 
 // start
 document.addEventListener('DOMContentLoaded', main);
+// === Mostrar información de los circuitos ===
+async function mostrarCircuitos() {
+  try {
+    const respuesta = await fetch('./data/circuitos.json');
+    const circuitos = await respuesta.json();
+
+    const contenedor = document.getElementById('circuitos');
+    contenedor.innerHTML = '';
+
+    circuitos.forEach(c => {
+      const card = document.createElement('div');
+      card.className = 'bg-gray-800 rounded-2xl p-4 mb-4 shadow-md';
+      card.innerHTML = `
+        <h3 class="text-xl font-semibold text-white mb-2">${c.nombre} (${c.pais})</h3>
+        <img src="${c.imagen}" alt="${c.nombre}" class="w-full rounded-xl mb-2">
+        <p>🏁 Fecha: ${c.fecha}</p>
+        <p>📏 Longitud: ${c.longitud} - Vueltas: ${c.vueltas}</p>
+        <p>🔥 Record: ${c.record} (${c.piloto_record})</p>
+        <p>🧤 Neumáticos: D-${c.neumaticos_ideales.delantero} / T-${c.neumaticos_ideales.trasero}</p>
+        <p>🛑 Frenos: ${c.frenos}</p>
+        <p>🌡️ Temp. ambiente: ${c.temperatura_ambiente} | pista: ${c.temperatura_pista}</p>
+        <p>☀️ Clima: ${c.clima}</p>
+      `;
+      contenedor.appendChild(card);
+    });
+  } catch (error) {
+    console.error('Error cargando circuitos:', error);
+  }
+}
+
+// Ejecutar al cargar
+mostrarCircuitos();

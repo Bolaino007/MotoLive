@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "Losail International Circuit",
+    "pais": "Catar",
+    "fecha": "2025-03-10",
+    "vueltas": 22,
+    "longitud": "5.4 km",
+    "record": "1:52.772",
+    "piloto_record": "Marc Márquez",
+    "neumaticos_ideales": {
+      "delantero": "Medio",
+      "trasero": "Blando"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "32°C",
+    "temperatura_pista": "45°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/8/85/Losail_International_Circuit.png"
+  },
+  {
+    "nombre": "Circuito de Jerez - Ángel Nieto",
+    "pais": "España",
+    "fecha": "2025-04-21",
+    "vueltas": 25,
+    "longitud": "4.4 km",
+    "record": "1:37.770",
+    "piloto_record": "Francesco Bagnaia",
+    "neumaticos_ideales": {
+      "delantero": "Duro",
+      "trasero": "Medio"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "26°C",
+    "temperatura_pista": "38°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Circuito_de_Jerez.svg"
+  }
+]

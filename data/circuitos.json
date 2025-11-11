@@ -2,7 +2,7 @@
   {
     "nombre": "Losail International Circuit",
     "pais": "Catar",
-    "fecha": "2025-03-10",
+    "fecha": "2025-03-09",
     "vueltas": 22,
     "longitud": "5.4 km",
     "record": "1:52.772",
@@ -18,9 +18,45 @@
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/8/85/Losail_International_Circuit.png"
   },
   {
+    "nombre": "Autódromo Termas de Río Hondo",
+    "pais": "Argentina",
+    "fecha": "2025-03-30",
+    "vueltas": 25,
+    "longitud": "4.8 km",
+    "record": "1:38.685",
+    "piloto_record": "Maverick Viñales",
+    "neumaticos_ideales": {
+      "delantero": "Duro",
+      "trasero": "Medio"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "30°C",
+    "temperatura_pista": "43°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Autodromo_Termas_de_Rio_Hondo.png"
+  },
+  {
+    "nombre": "Circuito de las Américas",
+    "pais": "Estados Unidos",
+    "fecha": "2025-04-13",
+    "vueltas": 20,
+    "longitud": "5.5 km",
+    "record": "2:03.575",
+    "piloto_record": "Marc Márquez",
+    "neumaticos_ideales": {
+      "delantero": "Medio",
+      "trasero": "Blando"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "28°C",
+    "temperatura_pista": "42°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Circuit_of_the_Americas.svg"
+  },
+  {
     "nombre": "Circuito de Jerez - Ángel Nieto",
     "pais": "España",
-    "fecha": "2025-04-21",
+    "fecha": "2025-05-04",
     "vueltas": 25,
     "longitud": "4.4 km",
     "record": "1:37.770",
@@ -34,6 +70,168 @@
     "temperatura_pista": "38°C",
     "clima": "Soleado",
     "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Circuito_de_Jerez.svg"
+  },
+  {
+    "nombre": "Le Mans",
+    "pais": "Francia",
+    "fecha": "2025-05-18",
+    "vueltas": 27,
+    "longitud": "4.2 km",
+    "record": "1:31.184",
+    "piloto_record": "Johann Zarco",
+    "neumaticos_ideales": {
+      "delantero": "Blando",
+      "trasero": "Blando"
+    },
+    "frenos": "Acero Brembo",
+    "temperatura_ambiente": "18°C",
+    "temperatura_pista": "24°C",
+    "clima": "Nublado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/1/10/Circuit_Bugatti_Le_Mans.svg"
+  },
+  {
+    "nombre": "Mugello",
+    "pais": "Italia",
+    "fecha": "2025-06-01",
+    "vueltas": 23,
+    "longitud": "5.2 km",
+    "record": "1:46.575",
+    "piloto_record": "Fabio Quartararo",
+    "neumaticos_ideales": {
+      "delantero": "Medio",
+      "trasero": "Duro"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "29°C",
+    "temperatura_pista": "41°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Mugello_Circuit.svg"
+  },
+  {
+    "nombre": "Circuit de Barcelona-Catalunya",
+    "pais": "España",
+    "fecha": "2025-06-15",
+    "vueltas": 24,
+    "longitud": "4.6 km",
+    "record": "1:39.939",
+    "piloto_record": "Francesco Bagnaia",
+    "neumaticos_ideales": {
+      "delantero": "Medio",
+      "trasero": "Blando"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "30°C",
+    "temperatura_pista": "45°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Circuit_de_Barcelona-Catalunya.svg"
+  },
+  {
+    "nombre": "Assen TT Circuit",
+    "pais": "Países Bajos",
+    "fecha": "2025-06-29",
+    "vueltas": 26,
+    "longitud": "4.5 km",
+    "record": "1:32.869",
+    "piloto_record": "Francesco Bagnaia",
+    "neumaticos_ideales": {
+      "delantero": "Blando",
+      "trasero": "Blando"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "21°C",
+    "temperatura_pista": "31°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4c/TT_Circuit_Assen.svg"
+  },
+  {
+    "nombre": "Silverstone Circuit",
+    "pais": "Reino Unido",
+    "fecha": "2025-08-03",
+    "vueltas": 20,
+    "longitud": "5.9 km",
+    "record": "1:59.346",
+    "piloto_record": "Marc Márquez",
+    "neumaticos_ideales": {
+      "delantero": "Duro",
+      "trasero": "Duro"
+    },
+    "frenos": "Acero Brembo",
+    "temperatura_ambiente": "19°C",
+    "temperatura_pista": "28°C",
+    "clima": "Variable",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Silverstone_Circuit_2011.svg"
+  },
+  {
+    "nombre": "Red Bull Ring",
+    "pais": "Austria",
+    "fecha": "2025-08-17",
+    "vueltas": 28,
+    "longitud": "4.3 km",
+    "record": "1:23.827",
+    "piloto_record": "Jorge Martín",
+    "neumaticos_ideales": {
+      "delantero": "Duro",
+      "trasero": "Medio"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "24°C",
+    "temperatura_pista": "38°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Red_Bull_Ring.svg"
+  },
+  {
+    "nombre": "Misano World Circuit Marco Simoncelli",
+    "pais": "Italia",
+    "fecha": "2025-09-07",
+    "vueltas": 27,
+    "longitud": "4.2 km",
+    "record": "1:31.868",
+    "piloto_record": "Francesco Bagnaia",
+    "neumaticos_ideales": {
+      "delantero": "Medio",
+      "trasero": "Medio"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "27°C",
+    "temperatura_pista": "40°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Misano_World_Circuit_Marco_Simoncelli_2021_Layout.png"
+  },
+  {
+    "nombre": "Sepang International Circuit",
+    "pais": "Malasia",
+    "fecha": "2025-10-26",
+    "vueltas": 20,
+    "longitud": "5.5 km",
+    "record": "1:58.303",
+    "piloto_record": "Fabio Quartararo",
+    "neumaticos_ideales": {
+      "delantero": "Medio",
+      "trasero": "Blando"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "34°C",
+    "temperatura_pista": "50°C",
+    "clima": "Húmedo y caluroso",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Sepang_international_circuit.png"
+  },
+  {
+    "nombre": "Valencia - Circuit Ricardo Tormo",
+    "pais": "España",
+    "fecha": "2025-11-16",
+    "vueltas": 27,
+    "longitud": "4.0 km",
+    "record": "1:30.983",
+    "piloto_record": "Jorge Lorenzo",
+    "neumaticos_ideales": {
+      "delantero": "Duro",
+      "trasero": "Blando"
+    },
+    "frenos": "Carbono Brembo",
+    "temperatura_ambiente": "22°C",
+    "temperatura_pista": "34°C",
+    "clima": "Soleado",
+    "imagen": "https://upload.wikimedia.org/wikipedia/commons/d/da/Circuit_Ricardo_Tormo.svg"
   }
 ]
 // === Mostrar información de los circuitos ===

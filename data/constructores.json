@@ -1,0 +1,100 @@
+[
+  {
+    "nombre": "Ducati",
+    "pais": "Italia",
+    "puntos": 740,
+    "color": "#E10600",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/59/Ducati_logo.svg"
+  },
+  {
+    "nombre": "Aprilia",
+    "pais": "Italia",
+    "puntos": 387,
+    "color": "#000000",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/53/Aprilia_logo.svg"
+  },
+  {
+    "nombre": "KTM",
+    "pais": "Austria",
+    "puntos": 350,
+    "color": "#FF6600",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4f/Red_Bull_KTM_logo.svg"
+  },
+  {
+    "nombre": "Honda",
+    "pais": "Japón",
+    "puntos": 276,
+    "color": "#FF0000",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/9/93/Repsol_Honda_logo.svg"
+  },
+  {
+    "nombre": "Yamaha",
+    "pais": "Japón",
+    "puntos": 237,
+    "color": "#0033A0",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/7/7c/Yamaha_Motor_Logo.svg"
+  }
+]
+<section class="card">
+  <h3>Constructores del Campeonato</h3>
+  <div id="constructores">
+    <p class="muted">Cargando tabla de constructores...</p>
+  </div>
+</section>
+// === Mostrar tabla dinámica de constructores ===
+async function mostrarConstructores() {
+  try {
+    const res = await fetch('./data/constructores.json');
+    const constructores = await res.json();
+
+    const contenedor = document.getElementById('constructores');
+    contenedor.innerHTML = '';
+
+    // Ordenar por puntos (de mayor a menor)
+    constructores.sort((a, b) => b.puntos - a.puntos);
+
+    // Crear la tabla
+    const tabla = document.createElement('table');
+    tabla.className = 'w-full border-collapse rounded-2xl overflow-hidden shadow-md text-sm';
+
+    // Encabezado
+    tabla.innerHTML = `
+      <thead class="bg-gray-700 text-white">
+        <tr>
+          <th class="p-2 text-left">Posición</th>
+          <th class="p-2 text-left">Constructor</th>
+          <th class="p-2 text-center">País</th>
+          <th class="p-2 text-center">Puntos</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-constructores" class="bg-gray-900 text-gray-200"></tbody>
+    `;
+    contenedor.appendChild(tabla);
+
+    // Cuerpo dinámico
+    const tbody = tabla.querySelector('#tabla-constructores');
+
+    constructores.forEach((c, i) => {
+      const fila = document.createElement('tr');
+      fila.innerHTML = `
+        <td class="p-2 text-center font-semibold">${i + 1}</td>
+        <td class="p-2 flex items-center gap-2">
+          <img src="${c.logo}" alt="${c.nombre}" class="w-6 h-6 rounded-full" />
+          <span style="color:${c.color}; font-weight:600;">${c.nombre}</span>
+        </td>
+        <td class="p-2 text-center">${c.pais}</td>
+        <td class="p-2 text-center font-bold" style="color:${c.color};">${c.puntos}</td>
+      `;
+      tbody.appendChild(fila);
+    });
+  } catch (error) {
+    console.error('Error cargando constructores:', error);
+  }
+}
+
+// Ejecutar al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.getElementById('constructores')) {
+    mostrarConstructores();
+  }
+});
